@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 90%;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.title {
+    font-size: 2rem;
+    animation: title 1s linear forwards infinite;
+}
+
+/* @keyframes title {
+    to {
+        opacity: .3;
+    }
+} */
+
+.count,
+.time,
+.result {
+    font-size: 1.6rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: .75rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.item {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.item.active {
+    position: relative;
+    display: flex;
+}
+
+.item.active::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 5px;
+    left: 40%;
+    transform: translateX(-40%);
+}
+
+.item .random {
+    font-size: 2rem;
+}
+
+.start {
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: 2px solid pink;
+    letter-spacing: .25rem;
+    background: transparent;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
